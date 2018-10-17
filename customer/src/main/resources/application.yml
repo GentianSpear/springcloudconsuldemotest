@@ -1,0 +1,17 @@
+server:
+  port: 8082
+spring:
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        register: true
+        healthCheckInterval: 15s
+        instance-id: customer
+        enabled: true
+        hostname: localhost
+        port: 8082
+      enabled: true
+  application:
+    name: customer
